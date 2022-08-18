@@ -20,8 +20,5 @@ Geodata: https://mega.nz/file/EAZUmZiD#PxdHN7jcEKCA8qaIBTIWLWLGZcT5PdsKfIgkygTZg
 + GCC = 4.7.2 (Linux only)
 
 
-
-Read file [COPYING](COPYING.md)
-
 ## Authors &amp; Contributors
 Read file [THANKS](THANKS.md)
