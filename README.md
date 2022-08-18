@@ -19,8 +19,7 @@ Geodata: https://mega.nz/file/EAZUmZiD#PxdHN7jcEKCA8qaIBTIWLWLGZcT5PdsKfIgkygTZg
 + MS Visual Studio (Community) ≥ 16.4 (2019) (Desktop) (Not previews) 
 + GCC = 4.7.2 (Linux only)
 
-## Copyright
-License: GPL 2.0
+
 
 Read file [COPYING](COPYING.md)
 
