@@ -216,7 +216,7 @@ public:
         {
             player->SetAtLoginFlag(FlagAtLogin);
             player->DestroyItemCount(item->GetEntry(), 1, true);
-            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "Спасибо за помощь проекту Pandaria 5.4.8, вы только что активировали функцию по изменению своего персонажа. Пожалуйста перезайдите на свою учетную запись.", "Thanks for helping the Pandaria 5.4.8 project, you have just activated the function to change your character. Please re-login to your account."));
+            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "Спасибо за помощь проекту Pandaria 5.4.8, вы только что активировали функцию по изменению своего персонажа. Пожалуйста перезайдите на свою учетную запись.", "Merci d'avoir acheter sur Argus-World, vous venez d'activer une fonction de modification sur votre personnage. Veuillez vous déconnecter et reconnecter à votre compte."));
             player->SaveToDB();
         }
         return true;
