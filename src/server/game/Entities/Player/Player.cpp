@@ -85,6 +85,7 @@
 #include "AnticheatMgr.h"
 #include "SpellHistory.h"
 #include "RatedPvp.h"
+#include "revision.h"
 #include "CustomLogs.h"
 #include "PoolMgr.h"
 #include "Vignette.h"
@@ -16929,6 +16930,19 @@ void Player::AddQuest(Quest const* quest, Object* questGiver)
 
     SendQuestUpdate(questId);
 
+    if (sWorld->getBoolConfig(CONFIG_QUEST_ENABLE_QUEST_TRACKER)) // check if Quest Tracker is enabled
+    {
+        // prepare Quest Tracker datas
+        PreparedStatement* stmt = CharacterDatabase.GetPreparedStatement(CHAR_INS_QUEST_TRACK);
+        stmt->setUInt32(0, questId);
+        stmt->setUInt32(1, GetGUIDLow());
+        stmt->setString(2, _HASH);
+        stmt->setString(3, REV_DATE);
+
+        // add to Quest Tracker
+        CharacterDatabase.Execute(stmt);
+    }
+
     sScriptMgr->OnPlayerQuestAdded(this, quest);
 }
 
@@ -17035,6 +17049,16 @@ void Player::CompleteQuest(uint32 quest_id, bool completely, bool fromCommand)
 
             sScriptMgr->OnPlayerQuestCompleted(this, qInfo);
         }
+    }
+        if (sWorld->getBoolConfig(CONFIG_QUEST_ENABLE_QUEST_TRACKER)) // check if Quest Tracker is enabled
+    {
+        // prepare Quest Tracker datas
+        PreparedStatement* stmt = CharacterDatabase.GetPreparedStatement(CHAR_UPD_QUEST_TRACK_COMPLETE_TIME);
+        stmt->setUInt32(0, quest_id);
+        stmt->setUInt32(1, GetGUIDLow());
+
+        // add to Quest Tracker
+        CharacterDatabase.Execute(stmt);
     }
 }
 
