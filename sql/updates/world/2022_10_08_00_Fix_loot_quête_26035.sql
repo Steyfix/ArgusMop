@@ -1,0 +1,18 @@
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance`='75' WHERE  `entry`=2555 AND `item`=4522 AND `lootmode`='';
+SELECT `entry`, `item`, `ChanceOrQuestChance`, `lootmode`, `groupid`, `mincountOrRef`, `maxcount` FROM `creature_loot_template` WHERE  `entry`=2555 AND `item`=4522 AND `lootmode`='';
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance`='75' WHERE  `entry`=2552 AND `item`=4503 AND `lootmode`='';
+SELECT `entry`, `item`, `ChanceOrQuestChance`, `lootmode`, `groupid`, `mincountOrRef`, `maxcount` FROM `creature_loot_template` WHERE  `entry`=2552 AND `item`=4503 AND `lootmode`='';
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance`='75' WHERE  `entry`=2553 AND `item`=4503 AND `lootmode`='';
+SELECT `entry`, `item`, `ChanceOrQuestChance`, `lootmode`, `groupid`, `mincountOrRef`, `maxcount` FROM `creature_loot_template` WHERE  `entry`=2553 AND `item`=4503 AND `lootmode`='';
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance`='75' WHERE  `entry`=2554 AND `item`=4503 AND `lootmode`='';
+SELECT `entry`, `item`, `ChanceOrQuestChance`, `lootmode`, `groupid`, `mincountOrRef`, `maxcount` FROM `creature_loot_template` WHERE  `entry`=2554 AND `item`=4503 AND `lootmode`='';
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance`='75' WHERE  `entry`=2555 AND `item`=4503 AND `lootmode`='';
+SELECT `entry`, `item`, `ChanceOrQuestChance`, `lootmode`, `groupid`, `mincountOrRef`, `maxcount` FROM `creature_loot_template` WHERE  `entry`=2555 AND `item`=4503 AND `lootmode`='';
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance`='75' WHERE  `entry`=2556 AND `item`=4503 AND `lootmode`='';
+SELECT `entry`, `item`, `ChanceOrQuestChance`, `lootmode`, `groupid`, `mincountOrRef`, `maxcount` FROM `creature_loot_template` WHERE  `entry`=2556 AND `item`=4503 AND `lootmode`='';
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance`='75' WHERE  `entry`=2557 AND `item`=4503 AND `lootmode`='';
+SELECT `entry`, `item`, `ChanceOrQuestChance`, `lootmode`, `groupid`, `mincountOrRef`, `maxcount` FROM `creature_loot_template` WHERE  `entry`=2557 AND `item`=4503 AND `lootmode`='';
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance`='75' WHERE  `entry`=2558 AND `item`=4503 AND `lootmode`='';
+SELECT `entry`, `item`, `ChanceOrQuestChance`, `lootmode`, `groupid`, `mincountOrRef`, `maxcount` FROM `creature_loot_template` WHERE  `entry`=2558 AND `item`=4503 AND `lootmode`='';
+UPDATE `creature_loot_template` SET `ChanceOrQuestChance`='75' WHERE  `entry`=2605 AND `item`=4503 AND `lootmode`='';
+SELECT `entry`, `item`, `ChanceOrQuestChance`, `lootmode`, `groupid`, `mincountOrRef`, `maxcount` FROM `creature_loot_template` WHERE  `entry`=2605 AND `item`=4503 AND `lootmode`='';
