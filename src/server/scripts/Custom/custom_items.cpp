@@ -80,7 +80,7 @@ public:
         }
         else
         {
-            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "У вас нет необходимого жетона.", "You do not have the necessary token."));
+            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "У вас нет необходимого жетона.", "Vous n'avez pas le jeton nécessaire."));
         }
         return true;
     }
@@ -95,18 +95,18 @@ public:
     {
         if (player->IsInCombat() || player->InArena() || player->InBattleground())
         {
-            player->GetSession()->SendNotification(GetText(player, "Вы не можете использовать этот жетон, пока находитесь в бою, на арене или поле боя.", "You may not use this token whilst you are in combat or present in an arena or battleground."));
+            player->GetSession()->SendNotification(GetText(player, "Вы не можете использовать этот жетон, пока находитесь в бою, на арене или поле боя.", "Vous ne pouvez pas utiliser ce jeton pendant que vous êtes en combat ou présent dans une arène ou un champ de bataille."));
         }
         else if (player->HasItemCount(item->GetEntry(), 1, true))
         {
             player->ModifyCurrency(CURRENCY_TYPE_VALOR_POINTS, 1000 * CURRENCY_PRECISION, true, true, true);
-            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "Спасибо за помощь проекту Pandaria 5.4.8, вы только что получили 1000 очков доблести.", "Thanks for helping the Pandaria 5.4.8 project, you just received 1000 valor points."));
+            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "Спасибо за помощь проекту Pandaria 5.4.8, вы только что получили 1000 очков доблести.", "Merci d'avoir aidé le serveur Argus-World, vous venez de recevoir 1000 points de vailance."));
             player->DestroyItemCount(item->GetEntry(), 1, true);
             player->SaveToDB();
         }
         else
         {
-            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "У вас нет необходимого жетона.", "You do not have the necessary token."));
+            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "У вас нет необходимого жетона.", "Vous n'avez pas le jeton nécessaire."));
         }
         return true;
     }
@@ -121,18 +121,18 @@ public:
     {
         if (player->IsInCombat() || player->InArena() || player->InBattleground())
         {
-            player->GetSession()->SendNotification(GetText(player, "Вы не можете использовать этот жетон, пока находитесь в бою, на арене или поле боя.", "You may not use this token whilst you are in combat or present in an arena or battleground."));
+            player->GetSession()->SendNotification(GetText(player, "Вы не можете использовать этот жетон, пока находитесь в бою, на арене или поле боя.", "Vous ne pouvez pas utiliser ce jeton pendant que vous êtes en combat ou présent dans une arène ou un champ de bataille."));
         }
         else if (player->HasItemCount(item->GetEntry(), 1, true))
         {
             player->ModifyCurrency(390, 1000 * CURRENCY_PRECISION);
-            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "Спасибо за помощь проекту Pandaria 5.4.8, вы только что получили 1000 очков завоевания.", "Thanks for helping the Pandaria 5.4.8 project, you just received 1000 conquest points."));
+            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "Спасибо за помощь проекту Pandaria 5.4.8, вы только что получили 1000 очков завоевания.", "Merci d'avoir aidé le serveur Argus-World, vous venez de recevoir 1000 points de conquête."));
             player->DestroyItemCount(item->GetEntry(), 1, true);
             player->SaveToDB();
         }
         else
         {
-            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "У вас нет необходимого жетона.", "You do not have the necessary token."));
+            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "У вас нет необходимого жетона.", "Vous n'avez pas le jeton nécessaire."));
         }
         return true;
     }
@@ -148,11 +148,11 @@ public:
     {
         if (player->IsInCombat() || player->InArena() || player->InBattleground())
         {
-            player->GetSession()->SendNotification(GetText(player, "Вы не можете использовать этот жетон, пока находитесь в бою, на арене или поле боя.", "You may not use this token whilst you are in combat or present in an arena or battleground."));
+            player->GetSession()->SendNotification(GetText(player, "Вы не можете использовать этот жетон, пока находитесь в бою, на арене или поле боя.", "YVous ne pouvez pas utiliser ce jeton pendant que vous êtes en combat ou présent dans une arène ou un champ de bataille."));
         }
         else if (uint64(player->GetMoney() + Gold) > MAX_MONEY_AMOUNT)
         {
-            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "Превышен максимально допустимый лимит золота.", "Maximum allowed gold limit exceeded."));
+            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "Превышен максимально допустимый лимит золота.", "Limite d'or maximale autorisée dépassée."));
         }
         else
         {
@@ -161,7 +161,7 @@ public:
 
             std::ostringstream gold_amount_message_ru, gold_amount_message_en;
             gold_amount_message_ru << "Спасибо за помощь проекту Pandaria 5.4.8, вы только что получили " << Gold/10000 << " золотых.";
-            gold_amount_message_en << "Thanks for helping the Pandaria 5.4.8 project, you just received " << Gold/10000 << " gold.";
+            gold_amount_message_en << "Merci d'avoir aidé le Serveur Argus-World, vous venez de recevoir " << Gold/10000 << " Po.";
             ChatHandler(player->GetSession()).SendSysMessage(GetText(player, gold_amount_message_ru.str().c_str(), gold_amount_message_en.str().c_str()));
             player->SaveToDB();
         }
@@ -179,16 +179,16 @@ public:
     {
         if (player->IsInCombat() || player->InArena() || player->InBattleground())
         {
-            player->GetSession()->SendNotification(GetText(player, "Вы не можете использовать этот жетон, пока находитесь в бою, на арене или поле боя.", "You may not use this token whilst you are in combat or present in an arena or battleground."));
+            player->GetSession()->SendNotification(GetText(player, "Вы не можете использовать этот жетон, пока находитесь в бою, на арене или поле боя.", "Vous ne pouvez pas utiliser ce jeton pendant que vous êtes en combat ou présent dans une arène ou un champ de bataille."));
         }
         else if (Level <= player->getLevel())
         {
-            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "Текущий уровень вашего персонажа слишком высокий.", "Your current character level is too high."));
+            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "Текущий уровень вашего персонажа слишком высокий.", "Votre niveau de personnage actuel est trop élevé."));
         }
         else
         {
             player->GiveLevel(Level);
-            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "Спасибо за помощь проекту Pandaria 5.4.8, вы только что повысили уровень своего порсонажа до 90-го.", "Thanks for helping the Pandaria 5.4.8 project, you just leveled up your character to level 90."));
+            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "Спасибо за помощь проекту Pandaria 5.4.8, вы только что повысили уровень своего порсонажа до 90-го.", "Merci d'avoir aidé le serveur Argus-World, vous venez de monter votre personnage au level 90."));
             player->DestroyItemCount(item->GetEntry(), 1, true);
             player->SaveToDB();
         }
@@ -206,11 +206,11 @@ public:
     {
         if (player->IsInCombat() || player->InArena() || player->InBattleground())
         {
-            player->GetSession()->SendNotification(GetText(player, "Вы не можете использовать этот жетон, пока находитесь в бою, на арене или поле боя.", "You may not use this token whilst you are in combat or present in an arena or battleground."));
+            player->GetSession()->SendNotification(GetText(player, "Вы не можете использовать этот жетон, пока находитесь в бою, на арене или поле боя.", "Vous ne pouvez pas utiliser ce jeton pendant que vous êtes en combat ou présent dans une arène ou un champ de bataille."));
         }
         else if (player->HasAtLoginFlag((AtLoginFlags)0xFFFFFFFF))
         {
-            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "Вы уже активировали эту функцию.", "You have already activated this feature."));
+            ChatHandler(player->GetSession()).SendSysMessage(GetText(player, "Вы уже активировали эту функцию.", "Vous avez déjà activé cette fonctionnalité."));
         }
         else
         {
